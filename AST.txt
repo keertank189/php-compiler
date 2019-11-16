@@ -1,0 +1,112 @@
+
+
+-------------------
+Abstract Sntax Tree
+-------------------
+
+└──stt
+    ├──=
+    │   ├──(variable, $x)
+    │   └──(string, "please work")
+    └──stt
+        ├──=
+        │   ├──(variable, $x)
+        │   └──(int, 67)
+        └──stt
+            ├──=
+            │   ├──(variable, $y)
+            │   └──(int, 10)
+            └──stt
+                ├──=
+                │   ├──(variable, $z)
+                │   └──(int, 45)
+                └──stt
+                    ├──switch
+                    │   ├──(variable, $x)
+                    │   └──case
+                    │       ├──(keyword, case label)
+                    │       ├──(int, 1)
+                    │       ├──stt
+                    │       │   ├──=
+                    │       │   │   ├──(variable, $x)
+                    │       │   │   └──(int, 10)
+                    │       │   └──stt
+                    │       │       └──(keyword, break)
+                    │       └──case
+                    │           ├──(keyword, case label)
+                    │           ├──(int, 10)
+                    │           └──stt
+                    │               ├──=
+                    │               │   ├──(variable, $x)
+                    │               │   └──(int, 6)
+                    │               └──stt
+                    │                   └──(keyword, break)
+                    └──stt
+                        ├──if
+                        │   ├──&&
+                        │   │   ├──>
+                        │   │   │   ├──(variable, $x)
+                        │   │   │   └──(variable, $y)
+                        │   │   └──<
+                        │   │       ├──(variable, $y)
+                        │   │       └──(variable, $z)
+                        │   ├──stt
+                        │   │   └──if
+                        │   │       ├──&&
+                        │   │       │   ├──>
+                        │   │       │   │   ├──(variable, $x)
+                        │   │       │   │   └──(variable, $y)
+                        │   │       │   └──<
+                        │   │       │       ├──(variable, $y)
+                        │   │       │       └──(variable, $z)
+                        │   │       ├──stt
+                        │   │       │   ├──=
+                        │   │       │   │   ├──(variable, $y)
+                        │   │       │   │   └──+
+                        │   │       │   │       ├──(variable, $x)
+                        │   │       │   │       └──(int, 10)
+                        │   │       │   └──stt
+                        │   │       │       └──=
+                        │   │       │           ├──(variable, $z)
+                        │   │       │           └──+
+                        │   │       │               ├──(variable, $y)
+                        │   │       │               └──(int, 40)
+                        │   │       └──restofif
+                        │   │           ├──(no else if, )
+                        │   │           └──else
+                        │   │               └──stt
+                        │   │                   └──=
+                        │   │                       ├──(variable, $x)
+                        │   │                       └──+
+                        │   │                           ├──*
+                        │   │                           │   ├──(int, 8)
+                        │   │                           │   └──(int, 6)
+                        │   │                           └──(int, 4)
+                        │   └──restofif
+                        │       ├──(no else if, )
+                        │       └──else
+                        │           └──stt
+                        │               ├──=
+                        │               │   ├──(variable, $x)
+                        │               │   └──+
+                        │               │       ├──*
+                        │               │       │   ├──(int, 8)
+                        │               │       │   └──(int, 6)
+                        │               │       └──(int, 4)
+                        │               └──stt
+                        │                   └──=
+                        │                       ├──(variable, $x)
+                        │                       └──(int, 10)
+                        └──stt
+                            └──while
+                                ├──&&
+                                │   ├──>
+                                │   │   ├──(variable, $x)
+                                │   │   └──(int, 10)
+                                │   └──<
+                                │       ├──(variable, $y)
+                                │       └──(int, 45)
+                                └──stt
+                                    └──++
+                                        └──(variable, $x)
+
